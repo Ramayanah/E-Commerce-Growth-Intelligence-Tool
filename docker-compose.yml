@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  growth-tool:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - STREAMLIT_SERVER_RUN_ON_SAVE=true

@@ -1,0 +1,182 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   styles.css — E-Commerce Growth Intelligence Tool
+   Separated CSS for clean architecture. Light, modern theme.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Google Font ──────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ─── Main Background ─────────────────────────────────────────────────────── */
+.main {
+    background-color: #f8f9fa;
+}
+
+/* ─── Global Center Alignment ─────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    text-align: center;
+}
+
+.stMarkdown p,
+.stMarkdown li {
+    text-align: center;
+}
+
+/* ─── Metric Cards (st.metric override) ───────────────────────────────────── */
+[data-testid="stMetric"] {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+[data-testid="stMetric"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 0.9rem !important;
+    color: #6b7280 !important;
+    font-weight: 500;
+    justify-content: center;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    justify-content: center;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 0.85rem !important;
+    font-weight: 600;
+    justify-content: center;
+}
+
+/* ─── Delta Indicators ────────────────────────────────────────────────────── */
+[data-testid="stMetricDelta"] svg {
+    display: none;
+}
+
+[data-testid="stMetricDelta"]>div {
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+/* ─── Tabs ─────────────────────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 24px;
+    justify-content: center;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: #4b5563;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* ─── Header ──────────────────────────────────────────────────────────────── */
+.main-header {
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.main-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2563eb, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.main-header p {
+    color: #6b7280;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* ─── Profile Image ───────────────────────────────────────────────────────── */
+.profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ─── Insight Boxes ───────────────────────────────────────────────────────── */
+.stAlert {
+    border-radius: 8px !important;
+}
+
+/* ─── Sidebar ─────────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #1f2937;
+}
+
+/* ─── CAGR Box ────────────────────────────────────────────────────────────── */
+.cagr-box {
+    background-color: #f0f9ff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #0284c7;
+    text-align: center;
+}
+
+/* ─── Expander ────────────────────────────────────────────────────────────── */
+.streamlit-expanderHeader {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* ─── Data Preview Table ──────────────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ─── Divider ─────────────────────────────────────────────────────────────── */
+hr {
+    border-color: #e5e7eb;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────────── */
+.footer-text {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem 0;
+}
