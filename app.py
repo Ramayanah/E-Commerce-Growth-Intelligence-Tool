@@ -21,7 +21,7 @@ from modules import visualization as viz
 from modules.load_image import img_to_base64
 
 
-# ─── Page Config ─────────────────────────────────────────────────────────────
+#  Page Config 
 st.set_page_config(
     page_title="E-Commerce Growth Intelligence",
     page_icon="🚀",
@@ -30,7 +30,7 @@ st.set_page_config(
 )
 
 
-# ─── Load External CSS ──────────────────────────────────────────────────────
+#  Load External CSS 
 def load_css(file_path):
     """Load and inject CSS from an external file."""
     try:
@@ -43,7 +43,7 @@ def load_css(file_path):
 load_css("assets/styles.css")
 
 
-# ─── Sidebar: Profile + Uploader ────────────────────────────────────────────
+#  Sidebar: Profile + Uploader 
 with st.sidebar:
     # Profile section
     img_base64 = img_to_base64("assets/me.jpg")
@@ -54,7 +54,7 @@ with st.sidebar:
             f'</div>',
             unsafe_allow_html=True,
         )
-    st.markdown("<h3 style='text-align:center; margin-bottom:0;'>Raja Poddar</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align:center; margin-bottom:0;'>Raja Poddar -- Ramah</h3>", unsafe_allow_html=True)
     st.markdown(
         "<p style='text-align:center; color:#6b7280; font-size:0.85rem;'>"
         "Data Analyst | GST Consultant | Founder Of NaviData"
@@ -97,23 +97,23 @@ with st.sidebar:
         st.caption("Upload a file above to analyze your own data.")
 
 
-# ─── Main Area: Header ──────────────────────────────────────────────────────
+#  Main Area: Header 
 st.markdown(
     '<div class="main-header">'
-    '<h1>🚀 E-Commerce Growth Intelligence Tool</h1>'
-    '<p>Production-grade analytics for growth diagnostics, unit economics, and investor readiness</p>'
+    '<h1>🚀 E-Commerce Growth Intelligence Tool By Ramah</h1>'
+    '<p>Analytics for growth diagnostics, unit economics, and investor readiness</p>'
     '</div>',
     unsafe_allow_html=True,
 )
 
 
-# ─── Data Preview ────────────────────────────────────────────────────────────
+#  Data Preview 
 with st.expander("👀 Data Preview", expanded=False):
     st.dataframe(df.head(100), width="stretch", height=300)
     st.caption(f"Showing first {min(100, len(df))} rows of {len(df):,} total rows")
 
 
-# ─── Schema Detection ───────────────────────────────────────────────────────
+#  Schema Detection 
 mapped_df, mapping, missing_required = schema_detection.detect_and_map(df)
 
 mapping_report = schema_detection.format_mapping_report(mapping, missing_required)
@@ -131,7 +131,7 @@ if missing_required:
     st.stop()
 
 
-# ─── Data Cleaning ───────────────────────────────────────────────────────────
+#  Data Cleaning 
 clean_df, cleaning_report = data_cleaning.clean(mapped_df)
 
 cleaning_messages = data_cleaning.format_cleaning_report(cleaning_report)
@@ -147,12 +147,12 @@ if clean_df.empty:
     st.stop()
 
 
-# ─── Aggregation & KPIs ─────────────────────────────────────────────────────
+#  Aggregation & KPIs 
 monthly_df = aggregation.build_monthly_summary(clean_df)
 kpis = kpi_engine.compute_kpis(clean_df, monthly_df)
 
 
-# ─── Helpers ─────────────────────────────────────────────────────────────────
+#  Helpers 
 def render_kpi_cards(kpi_list):
     """Render a row of KPI cards using Streamlit native st.metric()."""
     if not kpi_list:
@@ -195,7 +195,7 @@ def render_tab(module, tab_name, *args, **kwargs):
         )
 
 
-# ─── Tabs ────────────────────────────────────────────────────────────────────
+#  Tabs 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "📊 Overview",
     "🔍 Growth Quality",
@@ -207,7 +207,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
 ])
 
 
-# ─── Tab 1: Overview ────────────────────────────────────────────────────────
+#  Tab 1: Overview 
 with tab1:
     st.markdown("## Top-Line Growth Overview")
 
@@ -280,7 +280,7 @@ with tab1:
     render_insights(overview_insights)
 
 
-# ─── Tab 2–7 ─────────────────────────────────────────────────────────────────
+#  Tab 2–7 
 with tab2:
     st.markdown("## Growth Quality Analysis")
     render_tab(growth_quality, "Growth Quality", clean_df, monthly_df, kpis)
@@ -306,11 +306,11 @@ with tab7:
     render_tab(cagr, "CAGR & Investor View", clean_df, monthly_df, kpis)
 
 
-# ─── Footer ─────────────────────────────────────────────────────────────────
+#  Footer 
 st.markdown("---")
 st.markdown(
     '<p class="footer-text">'
-    '🚀 E-Commerce Growth Intelligence Tool | Built with Streamlit & Plotly'
+    '🚀 E-Commerce Growth Intelligence Tool By Ramah | Built with Streamlit & Plotly'
     '</p>',
     unsafe_allow_html=True,
 )

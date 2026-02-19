@@ -3,14 +3,14 @@ config.py — Single Source of Truth
 Central constants, column aliases, color palette, and safe utilities.
 """
 
-# ─── Required & Optional Columns ───────────────────────────────────────────────
+#  Required & Optional Columns 
 REQUIRED_COLUMNS = ["date", "order_id", "customer_id", "revenue"]
 
 OPTIONAL_COLUMNS = [
     "cost", "channel", "region", "category", "device", "marketing_spend"
 ]
 
-# ─── Column Alias Map ──────────────────────────────────────────────────────────
+#  Column Alias Map 
 # Each standard column name → list of possible aliases found in user datasets.
 COLUMN_ALIASES = {
     # Required
@@ -59,10 +59,10 @@ COLUMN_ALIASES = {
     ],
 }
 
-# ─── Currency Symbols to Strip ─────────────────────────────────────────────────
+#  Currency Symbols to Strip 
 CURRENCY_SYMBOLS = ["₹", "$", "€", "£", "¥", ","]
 
-# ─── Date Formats to Try ───────────────────────────────────────────────────────
+#  Date Formats to Try 
 DATE_FORMATS = [
     "%Y-%m-%d",
     "%d-%m-%Y",
@@ -76,7 +76,7 @@ DATE_FORMATS = [
     "%B %d, %Y",
 ]
 
-# ─── Chart Configuration ───────────────────────────────────────────────────────
+#  Chart Configuration 
 CHART_TEMPLATE = "plotly_white"
 CHART_HEIGHT = 350
 
@@ -93,10 +93,10 @@ CHART_COLORS = [
     "#FECB52",  # Yellow
 ]
 
-# ─── Text Columns (for normalization) ──────────────────────────────────────────
+#  Text Columns (for normalization) 
 TEXT_COLUMNS = ["channel", "region", "category", "device"]
 
-# ─── Safe Math Utilities ───────────────────────────────────────────────────────
+#  Safe Math Utilities 
 
 def safe_divide(numerator, denominator, default=0.0):
     """Safe division that returns default when denominator is zero or None."""

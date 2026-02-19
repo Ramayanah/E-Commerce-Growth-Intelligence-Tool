@@ -1,17 +1,17 @@
-/* ═══════════════════════════════════════════════════════════════════════════
+/*
    styles.css — E-Commerce Growth Intelligence Tool
    Separated CSS for clean architecture. Light, modern theme.
-   ═══════════════════════════════════════════════════════════════════════════ */
+*/
 
-/* ─── Google Font ──────────────────────────────────────────────────────────── */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ─── Main Background ─────────────────────────────────────────────────────── */
+/* Main Background  */
 .main {
     background-color: #f8f9fa;
 }
 
-/* ─── Global Center Alignment ─────────────────────────────────────────────── */
+/*  Global Center Alignment  */
 h1,
 h2,
 h3,
@@ -28,7 +28,7 @@ h6 {
     text-align: center;
 }
 
-/* ─── Metric Cards (st.metric override) ───────────────────────────────────── */
+/* Metric Cards (st.metric override) */
 [data-testid="stMetric"] {
     background-color: #ffffff;
     padding: 20px;
@@ -52,7 +52,7 @@ h6 {
 }
 
 [data-testid="stMetricValue"] {
-    font-size: 1.8rem !important;
+    font-size: 1.3rem !important;
     font-weight: 700 !important;
     color: #111827 !important;
     justify-content: center;
@@ -64,7 +64,7 @@ h6 {
     justify-content: center;
 }
 
-/* ─── Delta Indicators ────────────────────────────────────────────────────── */
+/* Delta Indicators */
 [data-testid="stMetricDelta"] svg {
     display: none;
 }
@@ -74,7 +74,7 @@ h6 {
     border-radius: 12px;
 }
 
-/* ─── Tabs ─────────────────────────────────────────────────────────────────── */
+/* Tabs */
 .stTabs [data-baseweb="tab-list"] {
     gap: 24px;
     justify-content: center;
@@ -96,7 +96,7 @@ h6 {
     color: white;
 }
 
-/* ─── Header ──────────────────────────────────────────────────────────────── */
+/*  Header  */
 .main-header {
     text-align: center;
     padding: 1.5rem 0 1rem 0;
@@ -118,7 +118,7 @@ h6 {
     font-weight: 400;
 }
 
-/* ─── Profile Image ───────────────────────────────────────────────────────── */
+/*  Profile Image  */
 .profile-img {
     border-radius: 50%;
     width: 200px;
@@ -128,12 +128,12 @@ h6 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ─── Insight Boxes ───────────────────────────────────────────────────────── */
+/*  Insight Boxes  */
 .stAlert {
     border-radius: 8px !important;
 }
 
-/* ─── Sidebar ─────────────────────────────────────────────────────────────── */
+/*  Sidebar  */
 [data-testid="stSidebar"] {
     background-color: #ffffff;
     border-right: 1px solid #e5e7eb;
@@ -145,7 +145,7 @@ h6 {
     color: #1f2937;
 }
 
-/* ─── CAGR Box ────────────────────────────────────────────────────────────── */
+/*  CAGR Box  */
 .cagr-box {
     background-color: #f0f9ff;
     padding: 20px;
@@ -154,25 +154,25 @@ h6 {
     text-align: center;
 }
 
-/* ─── Expander ────────────────────────────────────────────────────────────── */
+/*  Expander  */
 .streamlit-expanderHeader {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #1f2937;
 }
 
-/* ─── Data Preview Table ──────────────────────────────────────────────────── */
+/*  Data Preview Table  */
 [data-testid="stDataFrame"] {
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* ─── Divider ─────────────────────────────────────────────────────────────── */
+/*  Divider  */
 hr {
     border-color: #e5e7eb;
 }
 
-/* ─── Footer ──────────────────────────────────────────────────────────────── */
+/*  Footer  */
 .footer-text {
     text-align: center;
     color: #9ca3af;
